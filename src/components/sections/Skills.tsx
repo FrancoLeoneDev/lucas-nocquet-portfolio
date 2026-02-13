@@ -75,7 +75,7 @@ function SkillCard({
       >
         {/* Emoji icon */}
         <motion.span
-          className="text-4xl block mb-4"
+          className="text-4xl block mb-4 gradient-text"
           animate={{ y: [0, -4, 0] }}
           transition={{
             duration: 3,

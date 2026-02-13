@@ -122,7 +122,7 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
                 : "bg-amber-500/20 text-amber-300 border border-amber-500/30"
             }`}
           >
-            {project.status === "completed" ? "✅ Completed" : "🚧 In Progress"}
+            {project.status === "completed" ? "Completed" : "In Progress"}
           </span>
         </motion.div>
 
@@ -135,7 +135,7 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
             transition={{ delay: index * 0.1 + 0.4 }}
           >
             <span className="px-3 py-1 rounded-full text-xs font-medium font-[family-name:var(--font-heading)] bg-primary-500/20 text-primary-300 border border-primary-500/30 animate-glow-pulse">
-              ⭐ Featured
+              Featured
             </span>
           </motion.div>
         )}
@@ -255,7 +255,7 @@ export function Projects() {
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.15 }}
           >
-            A selection of my game development and virtual simulation projects 🎮
+            A selection of my game development and virtual simulation projects.
           </motion.p>
         </motion.div>
 

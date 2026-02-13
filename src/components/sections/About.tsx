@@ -100,7 +100,7 @@ export function About() {
                   boxShadow: "0 12px 40px rgba(168, 85, 247, 0.15)",
                 }}
               >
-                <span className="text-2xl mb-2 block">{stat.emoji}</span>
+                <span className="text-2xl mb-2 block gradient-text">{stat.emoji}</span>
                 <span className="text-3xl md:text-4xl font-bold font-[family-name:var(--font-heading)] gradient-text block">
                   <AnimatedCounter target={stat.number.replace("+", "")} suffix="+" />
                 </span>

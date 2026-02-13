@@ -160,26 +160,27 @@ export function Hero() {
           </motion.a>
         </motion.div>
 
-        {/* Scroll indicator */}
+      </div>
+
+      {/* Scroll indicator - positioned relative to the section */}
+      <motion.div
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 3.2 }}
+      >
         <motion.div
-          className="absolute bottom-8 left-1/2 -translate-x-1/2"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 3.2 }}
+          className="w-6 h-10 rounded-full border-2 border-dark-400 flex items-start justify-center p-1.5"
+          animate={{ borderColor: ["rgba(74,74,102,1)", "rgba(168,85,247,0.5)", "rgba(74,74,102,1)"] }}
+          transition={{ duration: 2, repeat: Infinity }}
         >
           <motion.div
-            className="w-6 h-10 rounded-full border-2 border-dark-400 flex items-start justify-center p-1.5"
-            animate={{ borderColor: ["rgba(74,74,102,1)", "rgba(168,85,247,0.5)", "rgba(74,74,102,1)"] }}
-            transition={{ duration: 2, repeat: Infinity }}
-          >
-            <motion.div
-              className="w-1.5 h-1.5 rounded-full bg-primary-400"
-              animate={{ y: [0, 16, 0] }}
-              transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
-            />
-          </motion.div>
+            className="w-1.5 h-1.5 rounded-full bg-primary-400"
+            animate={{ y: [0, 16, 0] }}
+            transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
+          />
         </motion.div>
-      </div>
+      </motion.div>
     </section>
   );
 }

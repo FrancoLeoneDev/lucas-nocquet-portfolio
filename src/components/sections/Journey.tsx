@@ -21,7 +21,7 @@ function TimelineItem({
       {/* Timeline line and dot */}
       <div className="flex flex-col items-center">
         <motion.div
-          className="w-12 h-12 rounded-full glass flex items-center justify-center text-xl shrink-0 border border-primary-500/20 z-10"
+          className="w-12 h-12 rounded-full glass flex items-center justify-center text-xl shrink-0 border border-primary-500/20 z-10 gradient-text"
           initial={{ scale: 0 }}
           animate={isInView ? { scale: 1 } : {}}
           transition={{

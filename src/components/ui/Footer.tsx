@@ -18,15 +18,14 @@ export function Footer() {
         >
           {/* Logo */}
           <span className="font-[family-name:var(--font-heading)] text-sm font-bold text-dark-300">
-            <span className="text-primary-500">&lt;</span>
-            {personalInfo.name.split(" ")[0]}
-            <span className="text-accent-500">/</span>
-            <span className="text-primary-500">&gt;</span>
+            <span className="gradient-text">&#9670;</span>
+            <span className="ml-1">{personalInfo.name.split(" ")[0]}</span>
+            <span className="text-dark-400 ml-1">N.</span>
           </span>
 
           {/* Copyright */}
           <p className="text-dark-400 text-xs font-[family-name:var(--font-body)]">
-            &copy; {year} {personalInfo.name}. Built with passion 🎮
+            &copy; {year} {personalInfo.name}. Crafted with dedication.
           </p>
 
           {/* Social */}

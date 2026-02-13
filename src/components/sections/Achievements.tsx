@@ -44,7 +44,7 @@ export function Achievements() {
             >
               {/* Emoji badge */}
               <motion.span
-                className="text-3xl block mb-3"
+                className="text-3xl block mb-3 gradient-text-gold"
                 whileHover={{ scale: 1.2, rotate: 10 }}
                 transition={{ type: "spring", stiffness: 400, damping: 10 }}
               >

@@ -72,9 +72,9 @@ export const aboutParagraphs: string[] = [
 ];
 
 export const stats: Stat[] = [
-  { number: "5+", label: "Game Projects", emoji: "🎮" },
-  { number: "10+", label: "Technologies", emoji: "⚡" },
-  { number: "2+", label: "Virtual Simulations", emoji: "🌐" },
+  { number: "5+", label: "Game Projects", emoji: "◆" },
+  { number: "10+", label: "Technologies", emoji: "◇" },
+  { number: "2+", label: "Virtual Simulations", emoji: "▣" },
 ];
 
 // ===== Skills & Technologies =====
@@ -82,37 +82,37 @@ export const skills: SkillCategory[] = [
   {
     category: "3D Modeling",
     tools: ["Maya", "Blender", "ZBrush", "3Ds Max"],
-    emoji: "🎨",
+    emoji: "◈",
     color: "primary",
   },
   {
     category: "3D Texturing",
     tools: ["Substance Painter"],
-    emoji: "🖌️",
+    emoji: "▧",
     color: "accent",
   },
   {
     category: "Game Development",
     tools: ["Unity", "Unreal", "C#"],
-    emoji: "🎮",
+    emoji: "▶",
     color: "gold",
   },
   {
     category: "2D & 3D Animation",
     tools: ["Dragonbones", "Maya", "3Ds Max"],
-    emoji: "🎬",
+    emoji: "◎",
     color: "primary",
   },
   {
     category: "UI Interfaces",
     tools: ["Photoshop", "Krita", "Figma"],
-    emoji: "🖥️",
+    emoji: "◻",
     color: "accent",
   },
   {
     category: "Programming",
     tools: ["Python", "C#", "Visual Basic"],
-    emoji: "💻",
+    emoji: "⟐",
     color: "gold",
   },
 ];
@@ -159,22 +159,22 @@ export const journey: JourneyItem[] = [
   {
     title: "Designer and Programmer of Virtual Simulators",
     institution: "Da Vinci Multimedia Art School",
-    emoji: "🎓",
+    emoji: "◆",
   },
   {
     title: "Computer Technician",
     institution: "Luis A. Huergo Industrial Institute",
-    emoji: "🔧",
+    emoji: "◇",
   },
   {
     title: "First Certificate in English Level 1",
     institution: "Certificate in ESOL International",
-    emoji: "🌍",
+    emoji: "○",
   },
   {
     title: "C# Programming Course for Video Games",
     institution: "UTN",
-    emoji: "💻",
+    emoji: "▣",
   },
 ];
 
@@ -183,36 +183,36 @@ export const achievements: Achievement[] = [
   {
     title: "1st Diploma of Cisco ITE CFT27",
     year: "2019",
-    emoji: "🏅",
+    emoji: "◆",
   },
   {
     title: "2nd Diploma of Cisco CCNA 1 V6.0",
     year: "2020",
-    emoji: "🏅",
+    emoji: "◆",
   },
   {
     title: "C# Programming Course for Video Games",
     detail: "UTN",
-    emoji: "🎮",
+    emoji: "▶",
   },
   {
     title: "Designer and Programmer of Virtual Simulators",
     detail: "Da Vinci Multimedia Art School",
-    emoji: "🎓",
+    emoji: "◈",
   },
   {
     title: "Computer Technician",
     detail: "Luis A. Huergo Industrial Institute",
-    emoji: "🔧",
+    emoji: "◇",
   },
   {
     title: "Diploma AACI Level Senior 6 - B2 CEFR",
     detail: "Accreditation exams in AACI & CLE",
-    emoji: "🌍",
+    emoji: "○",
   },
   {
     title: "First Certificate in English Level 1",
     detail: "Certificate in ESOL International",
-    emoji: "📜",
+    emoji: "◎",
   },
 ];
