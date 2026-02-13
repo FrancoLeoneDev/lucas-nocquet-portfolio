@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { SiAutodeskmaya } from "react-icons/si";
 import { personalInfo } from "@/data/portfolio";
 
 export function Footer() {
@@ -17,11 +18,12 @@ export function Footer() {
           transition={{ duration: 0.5 }}
         >
           {/* Logo */}
-          <span className="font-[family-name:var(--font-heading)] text-sm font-bold text-dark-300">
-            <span className="text-primary-500">&lt;</span>
-            {personalInfo.name.split(" ")[0]}
-            <span className="text-accent-500">/</span>
-            <span className="text-primary-500">&gt;</span>
+          <span className="font-[family-name:var(--font-heading)] text-sm font-bold text-dark-300 inline-flex items-center gap-2">
+            <span className="relative flex items-center justify-center">
+              <span className="absolute w-7 h-7 rounded-full bg-accent-400/10 animate-pulse" />
+              <SiAutodeskmaya className="relative text-accent-500 text-sm" />
+            </span>
+            {personalInfo.name}
           </span>
 
           {/* Copyright */}

@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { SiAutodeskmaya } from "react-icons/si";
 import { personalInfo } from "@/data/portfolio";
 
 const navLinks = [
@@ -55,10 +56,11 @@ export function Navbar() {
           className="font-[family-name:var(--font-heading)] text-lg font-bold tracking-tight"
           whileHover={{ scale: 1.05 }}
         >
-          <span className="text-primary-400">&lt;</span>
-          <span className="text-white">{personalInfo.name.split(" ")[0]}</span>
-          <span className="text-accent-400">/</span>
-          <span className="text-primary-400">&gt;</span>
+          <span className="relative flex items-center justify-center">
+            <span className="absolute w-8 h-8 rounded-full bg-accent-400/15 animate-pulse" />
+            <SiAutodeskmaya className="relative text-accent-400 text-lg" />
+          </span>
+          <span className="text-white ml-2.5 tracking-tight">{personalInfo.name}</span>
         </motion.a>
 
         {/* Desktop Links */}
