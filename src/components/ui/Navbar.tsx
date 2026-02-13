@@ -53,14 +53,14 @@ export function Navbar() {
         {/* Logo */}
         <motion.a
           href="#"
-          className="font-[family-name:var(--font-heading)] text-lg font-bold tracking-tight"
+          className="flex items-center gap-2.5 font-[family-name:var(--font-heading)] text-lg font-bold tracking-tight"
           whileHover={{ scale: 1.05 }}
         >
           <span className="relative flex items-center justify-center">
             <span className="absolute w-8 h-8 rounded-full bg-accent-400/15 animate-pulse" />
             <SiAutodeskmaya className="relative text-accent-400 text-lg" />
           </span>
-          <span className="text-white ml-2.5 tracking-tight">{personalInfo.name}</span>
+          <span className="text-white tracking-tight">{personalInfo.name}</span>
         </motion.a>
 
         {/* Desktop Links */}
