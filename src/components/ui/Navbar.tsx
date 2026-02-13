@@ -55,9 +55,10 @@ export function Navbar() {
           className="font-[family-name:var(--font-heading)] text-lg font-bold tracking-tight"
           whileHover={{ scale: 1.05 }}
         >
-          <span className="gradient-text">&#9670;</span>
-          <span className="text-white ml-1.5">{personalInfo.name.split(" ")[0]}</span>
-          <span className="text-dark-300 ml-1">N.</span>
+          <span className="text-primary-400">&lt;</span>
+          <span className="text-white">{personalInfo.name.split(" ")[0]}</span>
+          <span className="text-accent-400">/</span>
+          <span className="text-primary-400">&gt;</span>
         </motion.a>
 
         {/* Desktop Links */}

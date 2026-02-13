@@ -1,27 +1,73 @@
 "use client";
 
-import { useState } from "react";
+import { useState, type ReactNode } from "react";
 import { motion } from "framer-motion";
 import { skills } from "@/data/portfolio";
+import {
+  SiAutodeskmaya,
+  SiBlender,
+  SiAutodesk,
+  SiUnity,
+  SiUnrealengine,
+  SiAdobephotoshop,
+  SiKrita,
+  SiFigma,
+  SiPython,
+} from "react-icons/si";
+import { TbBrandCSharp, TbCube3dSphere, TbTexture, TbDeviceGamepad2, TbMovie, TbLayout, TbCode } from "react-icons/tb";
 
-const colorMap: Record<string, { border: string; glow: string; chip: string; chipText: string }> = {
+// Map tool names to their brand icons
+const toolIcons: Record<string, ReactNode> = {
+  Maya: <SiAutodeskmaya />,
+  Blender: <SiBlender />,
+  ZBrush: <SiAutodesk />,
+  "3Ds Max": <SiAutodesk />,
+  "Substance Painter": <TbTexture />,
+  Unity: <SiUnity />,
+  Unreal: <SiUnrealengine />,
+  "C#": <TbBrandCSharp />,
+  Dragonbones: <TbMovie />,
+  Photoshop: <SiAdobephotoshop />,
+  Krita: <SiKrita />,
+  Figma: <SiFigma />,
+  Python: <SiPython />,
+  "Visual Basic": <TbCode />,
+};
+
+// Map category names to their icons
+const categoryIcons: Record<string, ReactNode> = {
+  "3D Modeling": <TbCube3dSphere className="w-8 h-8" />,
+  "3D Texturing": <TbTexture className="w-8 h-8" />,
+  "Game Development": <TbDeviceGamepad2 className="w-8 h-8" />,
+  "2D & 3D Animation": <TbMovie className="w-8 h-8" />,
+  "UI Interfaces": <TbLayout className="w-8 h-8" />,
+  Programming: <TbCode className="w-8 h-8" />,
+};
+
+const colorMap: Record<
+  string,
+  { border: string; glow: string; chip: string; chipText: string; iconColor: string }
+> = {
   primary: {
     border: "border-primary-500/30",
     glow: "group-hover:shadow-primary-500/20",
     chip: "bg-primary-500/10",
     chipText: "text-primary-300",
+    iconColor: "text-primary-400",
   },
   accent: {
     border: "border-accent-500/30",
     glow: "group-hover:shadow-accent-500/20",
     chip: "bg-accent-500/10",
     chipText: "text-accent-300",
+    iconColor: "text-accent-400",
   },
   gold: {
     border: "border-gold-500/30",
     glow: "group-hover:shadow-gold-500/20",
     chip: "bg-gold-500/10",
     chipText: "text-gold-300",
+    iconColor: "text-gold-400",
   },
 };
 
@@ -73,9 +119,9 @@ function SkillCard({
         }}
         transition={{ type: "spring", stiffness: 300, damping: 20 }}
       >
-        {/* Emoji icon */}
-        <motion.span
-          className="text-4xl block mb-4 gradient-text"
+        {/* Category icon */}
+        <motion.div
+          className={`mb-4 ${colors.iconColor}`}
           animate={{ y: [0, -4, 0] }}
           transition={{
             duration: 3,
@@ -84,20 +130,20 @@ function SkillCard({
             delay: index * 0.3,
           }}
         >
-          {skill.emoji}
-        </motion.span>
+          {categoryIcons[skill.category]}
+        </motion.div>
 
         {/* Category name */}
         <h3 className="text-lg font-bold font-[family-name:var(--font-heading)] text-white mb-4">
           {skill.category}
         </h3>
 
-        {/* Tool chips */}
+        {/* Tool chips with icons */}
         <div className="flex flex-wrap gap-2">
           {skill.tools.map((tool, toolIndex) => (
             <motion.span
               key={tool}
-              className={`px-3 py-1.5 rounded-lg text-xs font-medium font-[family-name:var(--font-body)] ${colors.chip} ${colors.chipText}`}
+              className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium font-[family-name:var(--font-body)] ${colors.chip} ${colors.chipText}`}
               initial={{ opacity: 0, scale: 0 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
@@ -109,6 +155,9 @@ function SkillCard({
               }}
               whileHover={{ scale: 1.1, y: -2 }}
             >
+              {toolIcons[tool] && (
+                <span className="text-sm">{toolIcons[tool]}</span>
+              )}
               {tool}
             </motion.span>
           ))}
@@ -120,7 +169,10 @@ function SkillCard({
 
 export function Skills() {
   return (
-    <section id="skills" className="py-24 md:py-32 overflow-hidden relative bg-dark-800/30">
+    <section
+      id="skills"
+      className="py-24 md:py-32 overflow-hidden relative bg-dark-800/30"
+    >
       <div className="absolute inset-0 bg-grid pointer-events-none" />
 
       <div className="max-w-6xl mx-auto px-6 relative z-10">
